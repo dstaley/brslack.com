@@ -1,0 +1,56 @@
+body {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background: none;
+  color: white;
+  font-family: 'helvetica neue', helvetica, arial, sans-serif;
+}
+
+.full {
+  background: url(/img/background_1920.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.content {
+  margin: 0 auto;
+  margin-top: 90px;
+  padding: 0 10px;
+  max-width: 640px;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.subhead {
+  margin-bottom: 35px;
+}
+
+.typeform-share.link {
+  background-color: #4285f4;;
+  border-radius: 2px;
+  padding: .9em 1em;
+  margin-top: 15px;
+  text-transform: uppercase;
+  color: white;
+  transition: box-shadow .28s cubic-bezier(.4,0,.2,1);
+}
+
+.typeform-share.link:hover {
+  text-decoration: none;
+  box-shadow: 0 6px 10px rgba(0,0,0,.23),0 10px 30px rgba(0,0,0,.19);
+}
+
+@media (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) { 
+  .full {
+    background: url(/img/background_1440@2x.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
