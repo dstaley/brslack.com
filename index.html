@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html class="full" lang="en">
-<!-- Make sure the <html> tag is set to the .full CSS class. Change the background image in the full.css file. -->
-
 <head>
 
   <meta charset="utf-8">
@@ -13,25 +11,30 @@
   <title>Baton Rouge Slack</title>
 
   <style>
+    html {
+      height: 100%;
+    }
     body {
-      margin-top: 50px;
-      margin-bottom: 50px;
+      margin: 0;
+      min-height: 100%;
       background: none;
       color: white;
       font-family: 'helvetica neue', helvetica, arial, sans-serif;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-align-items: center;
+      align-items: center;
+      -webkit-justify-content: center;
+      justify-content: center;
     }
 
     .full {
       background: url(/img/background_1920.jpg) no-repeat center center fixed;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
       background-size: cover;
     }
 
     .content {
       margin: 0 auto;
-      margin-top: 90px;
       padding: 0 10px;
       max-width: 640px;
       text-align: center;
@@ -42,15 +45,11 @@
       color: #4285f4;
     }
 
-    .subhead {
-      margin-bottom: 35px;
-    }
-
     .typeform-share.link {
+      display: inline-block;
       background-color: #4285f4;
       border-radius: 2px;
       padding: .9em 1em;
-      margin-top: 15px;
       text-transform: uppercase;
       color: white;
       transition: box-shadow .28s cubic-bezier(.4,0,.2,1);
@@ -64,20 +63,13 @@
     footer {
       bottom: 0;
       position: fixed;
-      right: 0;
-      left: 0;
-      z-index: 1030;
-      margin-bottom: 10px;
-      margin-left: 10px;
+      margin: 0 0 10px 10px;
     }
 
     @media (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) { 
       .full {
-      background: url(/img/background_1440@2x.jpg) no-repeat center center fixed;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
+        background: url(/img/background_1440@2x.jpg) no-repeat center center fixed;
+        background-size: cover;
       }
     }
   </style>
@@ -89,7 +81,7 @@
   <div class="content">
     <h1>Baton Rouge Slack</h1>
     <p class="subhead">A community for people who are passionate about technology and happen to live in Baton Rouge, LA (and the surrounding areas).</p>
-    <div><a class="typeform-share link" href="https://dylanstaley.typeform.com/to/JqEZ5j" data-mode="1" target="_blank">Request Invite</a></div>
+    <a class="typeform-share link" href="https://dylanstaley.typeform.com/to/JqEZ5j" data-mode="1" target="_blank">Request Invite</a>
   </div>
 
   <footer>Photo by <a href="https://www.flickr.com/photos/33630741@N07/11941978643">Antrell Williams</a></footer>
