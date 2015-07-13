@@ -1,10 +1,10 @@
 # Baton Rouge Slack Code of Conduct
 
-Our Code of Conduct is designed to make it clear that we believe in tolerance, respect, inclusion and hard work. Weâ€™ve built a tremendously impressive community of good people, and our goal is to continue growing along the same trajectory.
+Our Code of Conduct is designed to make it clear that we believe in tolerance, respect, inclusion and hard work. We've built a tremendously impressive community of good people, and our goal is to continue growing along the same trajectory.
 
 ## We strive to:
 
-1. **Be empathetic and respectful**: We work together to resolve conflict, assume good intentions and do our best to act in an empathetic fashion. We donâ€™t allow frustration to turn into a personal attack. A community where people feel uncomfortable or threatened is not a productive one. We expect community members to resolve disagreements constructively.
+1. **Be empathetic and respectful**: We work together to resolve conflict, assume good intentions and do our best to act in an empathetic fashion. We don't allow frustration to turn into a personal attack. A community where people feel uncomfortable or threatened is not a productive one. We expect community members to resolve disagreements constructively.
 2. **Take responsibility for our words and our actions**: We can all make mistakes; when we do, we take responsibility for them. If someone has been harmed or offended, we listen carefully and respectfully, and work to right the wrong.
 
 This code is not exhaustive or complete. It serves to distill our common understanding of a collaborative, shared environment and goals. We expect it to be followed in spirit as much as in the letter.
@@ -13,7 +13,7 @@ This code is not exhaustive or complete. It serves to distill our common underst
 
 We are committed to being a community that everyone feels good about joining. Although we may not be able to satisfy everyone, we will always work to treat everyone well.
 
-Weâ€™ll avoid a laundry list of all the things you may and may not be, what classes are legally protected, etc etc etc. Whoever you are, wherever youâ€™re from, whatever you look like or identify as, believe in or donâ€™t believe in, and so on and so forth, know that youâ€™re welcome.
+We'll avoid a laundry list of all the things you may and may not be, what classes are legally protected, etc etc etc. Whoever you are, wherever you're from, whatever you look like or identify as, believe in or don't believe in, and so on and so forth, know that you're welcome.
 
 ## Reporting Issues
 
