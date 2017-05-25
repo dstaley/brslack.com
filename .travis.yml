@@ -1,14 +1,16 @@
 language: node_js
 node_js:
-  - "6"
-
+- '6'
 script:
-  - npm run generate
-  - npm run serviceworker
-
+- npm run generate
+- npm run serviceworker
 deploy:
   provider: s3
   bucket: next.brslack.com
   local_dir: public
   region: us-west-2
   skip_cleanup: true
+  access_key_id:
+    secure: Av2HPXW75ZKwdnGu9N2srstqVod1pP2HBgltplF0SxAscXXpBIzBuCBGhI+xnXnH1FDw872afw2RvQZJNmnk8Eg6SXJPnSwLiZ5lCnZWafQbuJqAQ9BGg3z/t53nY83QKor0MSLqF2Lc8EiYtYssqPkfjAL/931t5Vyzg+Q0CTI=
+  secret_access_key:
+    secure: lTvAps5VyJ/oasknY/7L+sXJf0vq7TQo8wYvLS93R8gGEYcQStjx/6HrpIxzATcIQQyqE5M9z0Vo3bSzecIg5A2tOpGli2sRRc6iHmA/K9pcdaYVFP6h2cGTNWQCkIVAjazbj/DQ/9XW4r1oH4vdC5zkIzCPpf8JLs4lANO0X8k=
