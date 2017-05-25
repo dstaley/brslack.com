@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - "6"
+
+script:
+  - npm run generate
+  - npm run serviceworker
+
+deploy:
+  provider: s3
+  bucket: next.brslack.com
+  local_dir: public
+  region: us-west-2
+  skip_cleanup: true

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title><%= page.hasOwnProperty('title') && page.title !== '' ? page.title + ' | ' : '' %><%= config.title %></title>
+		<%- inline_css('css/_style.scss') %>
+		<link rel="manifest" href="/manifest.json">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta property="og:title" content="Baton Rouge Slack" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://brslack.com" />
+		<meta property="og:description" content="<%= config.description %>" />
+		<meta name="theme-color" content="#006EBF">
+		<% if (page.path === 'index.html') { %>
+		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+		<% } %>
+	</head>
+
+	<body>
+		<nav role="navigation">
+			<ul>
+				<li><a href="/"><%- image_tag('img/icon.svg', { alt: 'Baton Rouge Slack Logo' }) %></a></li>
+				<li><a href="/">Home</a></li>
+				<li><a href="/code-of-conduct/">Code of Conduct</a></li>
+				<li><a href="/community-guidelines/">Community Guidelines</a></li>
+			</ul>
+		</nav>
+		<div class="container<%= page.enhance_readability ? ' readable-container' : '' %>">
+			<%- page.content %>
+		</div>
+		<div class="footer-container">
+			<div class="container">
+				<footer class="row">
+					<div class="columns">
+						This website is governed by the <a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="noopener">Creative Commons Zero license</a>; it’s public domain! Any and all use of this site’s content is allowed, which you can find on <a href="https://github.com/dstaley/brslack.com" rel="noopener">GitHub</a>.
+					</div>
+				</footer>
+			</div>
+		</div>
+		<div class="hidden snackbar">
+			<span>There's new content! Refresh to see it.</span>
+			<span class="snackbar-actions"><button onclick="window.location.reload()">Refresh</button></div>
+		</div>
+		<script type="text/javascript" src="/js/register-service-worker.js" async defer></script>
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-60428235-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+
+	</body>
+</html>
