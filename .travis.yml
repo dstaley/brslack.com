@@ -13,6 +13,8 @@ deploy:
   local_dir: public
   region: us-west-2
   skip_cleanup: true
+  on:
+    branch: next
   access_key_id:
     secure: Av2HPXW75ZKwdnGu9N2srstqVod1pP2HBgltplF0SxAscXXpBIzBuCBGhI+xnXnH1FDw872afw2RvQZJNmnk8Eg6SXJPnSwLiZ5lCnZWafQbuJqAQ9BGg3z/t53nY83QKor0MSLqF2Lc8EiYtYssqPkfjAL/931t5Vyzg+Q0CTI=
   secret_access_key:
