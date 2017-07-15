@@ -10,19 +10,17 @@ layout: page
 	<div class="columns columns-md-6">
 		<h2>How do I join?</h2>
 		<p>The Slack is invitation-only, but invitations are freely granted. You can request one by filling out this form: </p>
-		<form id="request-invite-form" action="/invite-requested">
+		<form id="request-invite-form" action="https://rznjr99zx2.execute-api.us-west-2.amazonaws.com/production/invite-requests" method="post">
 			<label><span>First Name: </span><input name="first_name" required type="text"></label>
 			<label><span>Last Name: </span><input name="last_name" required type="text"></label>
 			<label><span>Email: </span><input name="email" required type="email"></label>
 			<label><span>Twitter (optional): </span><input name="twitter" type="text"></label>
 			<label><span>GitHub (optional): </span><input name="github" type="text"></label>
-			<label><span>About You</span></label>
-			<textarea aria-label="About You" name="bio" placeholder="Tell us a bit about yourself! Anything or nothing is fine!"></textarea>
+			<label><span>About You (optional)</span></label>
+			<textarea aria-label="About You (optional)" name="bio" placeholder="Tell us a bit about yourself! Anything or nothing is fine!"></textarea>
 			<label><span>&nbsp;</span><input type="checkbox" name="lives_near_baton_rouge" required> I live in Baton Rouge or the surrounding area</label>
 			<label><span>&nbsp;</span><input type="checkbox" name="coc" required> I agree to the <a href="/code-of-conduct" target="_blank" rel="noopener">Code of Conduct</a></label>
 			<div class="g-recaptcha" data-sitekey="6LfYVyIUAAAAAKOse1ItrOsvUeBuJZ9bHZTINV-E"></div>
-			<input type="hidden" name="redirect_uri" value="http://lgbtq.technology/postsignup.html">
-			<input type="hidden" name="team_id" value="T0383959N">
 			<label><span>&nbsp;</span><button type="submit">Request Invite</button></label>
 		</form>
 	</div>
