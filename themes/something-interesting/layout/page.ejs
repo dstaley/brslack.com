@@ -16,6 +16,27 @@
 		<% if (page.path === 'index.html') { %>
 		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 		<% } %>
+		
+		<script type='application/ld+json'> 
+		{
+			"@context": "http://www.schema.org",
+			"@type": "EducationalOrganization",
+			"name": "Baton Rouge Slack",
+			"url": "https://brslack.com",
+			"description": "<%= config.description %>",
+			"address": {
+				"@type": "PostalAddress",
+				"addressLocality": "Baton Rouge",
+				"addressRegion": "LA",
+				"addressCountry": "United States"
+			},
+			"geo": {
+				"@type": "GeoCoordinates",
+				"latitude": "30.4582829",
+				"longitude": "-91.1403196"
+			}
+		}
+		</script>
 	</head>
 
 	<body>
