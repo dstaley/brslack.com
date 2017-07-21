@@ -3,18 +3,18 @@ node_js:
 - '6'
 branches:
   only:
-  - next
+  - master
 script:
 - npm run generate
 - npm run serviceworker
 deploy:
   provider: s3
-  bucket: next.brslack.com
+  bucket: brslack.com
   local_dir: public
   region: us-west-2
   skip_cleanup: true
   on:
-    branch: next
+    branch: master
   access_key_id:
     secure: SCBTRB1lJsxVN8TIzIWFtILkVpbJdFVY9CGzHEWev/UMHs9PNOvEbcyThISFF0qNAjCpJ1vtAl0FqohCGEHojdDWCqXRPtAfKWfwrsdWWaBO23K3VVSBqyOn9alX+BbyugyFBq1WPgSyVyiIIMRwwe8jHWOv4ZWPl2dZ0w+xMjk=
   secret_access_key:
