@@ -1,7 +1,7 @@
 ---
 title: Community Guidelines
-layout: page
-enhance_readability: true
+extra:
+  enhance_readability: true
 ---
 
 # Community Guidelines

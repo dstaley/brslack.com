@@ -1,7 +1,7 @@
 ---
 title: Thanks for signing up for Baton Rouge Slack
-layout: page
-enhance_readability: true
+extra:
+  enhance_readability: true
 ---
 
 # Your invite should be coming soon!

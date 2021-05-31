@@ -1,0 +1,125 @@
+{% extends "base.html" %} {%- block main -%}
+<h1>Baton Rouge Slack</h1>
+<p>
+  The
+  <a href="https://batonrouge.slack.com" rel="noopener">Baton Rouge Slack</a> is
+  community for Baton Rouge area developers, designers, marketers, business
+  people, hobbyists, students, entrepreneurs, and other professionals involved
+  in technology.
+</p>
+
+<div class="row">
+  <div class="columns columns-md-6">
+    <h2>How do I join?</h2>
+    <p>
+      The Slack is invitation-only, but invitations are freely granted. You can
+      request one by filling out this form:
+    </p>
+    <form
+      id="request-invite-form"
+      action="https://rznjr99zx2.execute-api.us-west-2.amazonaws.com/production/invite-requests"
+      method="post"
+    >
+      <label
+        ><span>First Name: </span><input name="first_name" required type="text"
+      /></label>
+      <label
+        ><span>Last Name: </span><input name="last_name" required type="text"
+      /></label>
+      <label
+        ><span>Email: </span><input name="email" required type="email"
+      /></label>
+      <label
+        ><span>Twitter (optional): </span><input name="twitter" type="text"
+      /></label>
+      <label
+        ><span>GitHub (optional): </span><input name="github" type="text"
+      /></label>
+      <label><span>About You (optional)</span></label>
+      <textarea
+        aria-label="About You (optional)"
+        name="bio"
+        placeholder="Tell us a bit about yourself! Anything or nothing is fine!"
+      ></textarea>
+      <label
+        ><span>&nbsp;</span
+        ><input type="checkbox" name="lives_near_baton_rouge" required /> I live
+        in Baton Rouge or the surrounding area</label
+      >
+      <label
+        ><span>&nbsp;</span><input type="checkbox" name="coc" required /> I
+        agree to the
+        <a href="/code-of-conduct" target="_blank" rel="noopener"
+          >Code of Conduct</a
+        ></label
+      >
+      <div
+        class="g-recaptcha"
+        data-sitekey="6LfYVyIUAAAAAKOse1ItrOsvUeBuJZ9bHZTINV-E"
+      ></div>
+      <label
+        ><span>&nbsp;</span><button type="submit">Request Invite</button></label
+      >
+    </form>
+  </div>
+  <div class="columns columns-md-6">
+    <h2>Who's invited?</h2>
+    <p>
+      Anybody who lives in Baton Rouge or the surrounding area and has an
+      interest in technology is welcome to join! You don't need to be a
+      developer, designer, or even work in the tech industry; you just need to
+      bring your interest and your passions.
+    </p>
+
+    <h2>I want to bring a friend!</h2>
+    <p>
+      If you know someone who wants to join the Slack, please direct them to
+      this page and ask them to submit the invite request; it's the fastest way
+      to get them their invite!
+    </p>
+
+    <h2>Channels</h2>
+    <p>
+      Slack chat spaces are divided into rooms called "channels", and we have a
+      few. There are three you'll be in by default:
+    </p>
+    <ul>
+      <li>
+        <span class="channel-name">#announcements</span>: occasional
+        announcements
+      </li>
+      <li><span class="channel-name">#chat</span>: random chat</li>
+      <li>
+        <span class="channel-name">#introductions</span>: introduce yourself!
+      </li>
+    </ul>
+    <p>
+      All rooms are opt-in except #announcements, which is why it is kept
+      low-volume.
+    </p>
+
+    <h2>What are the rules?</h2>
+    <p>
+      We have a simple <a href="/code-of-conduct/">Code of Conduct</a> that is
+      based on the same Code of Conduct used by projects such as
+      <a href="https://github.com/angular/code-of-conduct" rel="noopener"
+        >AngularJS</a
+      >,
+      <a href="https://dotnetfoundation.org/code-of-conduct" rel="noopener"
+        >The .NET Foundation</a
+      >, <a href="http://rubyonrails.org/conduct/" rel="noopener">Rails</a>, and
+      <a href="https://swift.org/community/#code-of-conduct" rel="noopener"
+        >Swift</a
+      >.
+    </p>
+
+    <h2>Community Guidelines</h2>
+    <p>
+      In order to help newcomers understand both Slack and our community a bit
+      more, we've documented some basic tips and tricks in our
+      <a href="/community-guidelines/">Community Guidelines</a>.
+    </p>
+  </div>
+</div>
+<script async src="https://www.google.com/recaptcha/api.js"></script>
+{% endblock %}

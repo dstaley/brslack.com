@@ -1,0 +1,23 @@
+# The URL the site will be built for
+base_url = "https://brslack.com"
+
+title = "Baton Rouge Slack"
+description = "The Baton Rouge Slack is a community for Baton Rouge area developers, designers, marketers, business people, hobbyists, students, entrepreneurs, and other professionals involved in technology."
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = false
+
+generate_feed = true
+feed_filename = "rss.xml"
+
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+[markdown]
+highlight_code = true
+highlight_theme = "dracula"
+
+[extra]
+# Put all your custom variables here
