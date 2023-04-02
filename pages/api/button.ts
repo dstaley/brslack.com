@@ -5,7 +5,8 @@ async function inviteUser(
   last_name: string,
   email: string
 ): Promise<void> {
-  console.log({ first_name, last_name, email });
+  // This API request is to an undocumented legacy endpoint. It only accepts
+  // form-encoded values, and needs a specific legacy token.
   const res = await fetch(
     "https://batonrouge.slack.com/api/users.admin.invite",
     {
@@ -24,7 +25,9 @@ async function inviteUser(
   );
 
   const response = await res.json();
-  console.log(response);
+  if (!response.ok) {
+    console.error(response);
+  }
 }
 
 export default async function buttonHandler(req: NextRequest) {
