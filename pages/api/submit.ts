@@ -33,8 +33,11 @@ export default async function submissionHandler(req: NextRequest) {
   try {
     const body = await req.formData();
     console.log(console.log(Object.fromEntries(body.entries())));
-    const hcaptcha = body["h-captcha-response"];
-    const valid = await validCaptcha(hcaptcha, req.ip);
+    const hcaptcha = body.get("h-captcha-response");
+    if (!hcaptcha) {
+      return new Response("Bad Request", { status: 400 });
+    }
+    const valid = await validCaptcha(hcaptcha as string, req.ip);
     if (valid) {
       const res = await fetch("https://slack.com/api/chat.postMessage", {
         method: "POST",
