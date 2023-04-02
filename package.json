@@ -1,25 +1,27 @@
 {
   "name": "brslack.com",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "private": true,
   "scripts": {
-    "serve": "hexo serve",
-    "generate": "hexo generate",
-    "serviceworker": "sw-precache --root=public"
-  },
-  "hexo": {
-    "version": "3.3.7"
+    "build": "next build",
+    "dev": "next dev"
   },
   "dependencies": {
-    "hexo": "^3.2.0",
-    "hexo-autoprefixer": "^1.0.0",
-    "hexo-generator-archive": "^0.1.4",
-    "hexo-generator-category": "^0.1.3",
-    "hexo-generator-tag": "^0.2.0",
-    "hexo-renderer-ejs": "^0.2.0",
-    "hexo-renderer-marked": "^0.2.10",
-    "hexo-renderer-sass": "dstaley/hexo-renderer-sass",
-    "hexo-server": "^0.2.0",
-    "sw-precache": "^5.1.1"
+    "@hcaptcha/react-hcaptcha": "^1.6.0",
+    "@mdx-js/loader": "^2.3.0",
+    "@next/mdx": "^13.2.4",
+    "@vercel/fetch": "^6.2.0",
+    "glob": "^9.3.2",
+    "next": "^13.2.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.60.0"
+  },
+  "devDependencies": {
+    "@types/mdx": "^2.0.4",
+    "@types/node": "18.15.11",
+    "@types/react": "^18.0.31",
+    "@types/react-dom": "^18.0.11",
+    "typescript": "^5.0.3"
   }
 }
