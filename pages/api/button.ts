@@ -87,7 +87,7 @@ export default async function buttonHandler(req: NextRequest) {
     const readable = new ReadableStream({
       async start(controller) {
         await inviteUser(firstName, lastName, email);
-        controller.enqueue(encoder.encode("ok"));
+        controller.enqueue(encoder.encode(""));
         controller.close();
       },
     });
