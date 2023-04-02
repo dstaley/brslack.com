@@ -4,6 +4,7 @@ async function validCaptcha(
   response: string,
   remoteip: string
 ): Promise<boolean> {
+  console.log({ response, remoteip });
   const form = new URLSearchParams({
     response,
     remoteip,
@@ -31,7 +32,7 @@ export default async function submissionHandler(req: NextRequest) {
   }
   try {
     const body = await req.formData();
-    console.log(body);
+    console.log(console.log(Object.fromEntries(body.entries())));
     const hcaptcha = body["h-captcha-response"];
     const valid = await validCaptcha(hcaptcha, req.ip);
     if (valid) {
