@@ -5,6 +5,7 @@ async function inviteUser(
   last_name: string,
   email: string
 ): Promise<void> {
+  console.log({ first_name, last_name, email });
   const res = await fetch(
     "https://batonrouge.slack.com/api/users.admin.invite",
     {
@@ -40,6 +41,7 @@ export default async function buttonHandler(req: NextRequest) {
     console.error({ parsedPayload });
     return new Response(null, { status: 500 });
   }
+  console.log({ split: callback_id.split("\\") });
   const [, email, firstName, lastName] = callback_id.split("\\");
   const action =
     parsedPayload.actions[0].value === "approve" ? "approved" : "denied";
