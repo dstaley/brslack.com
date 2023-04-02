@@ -79,8 +79,19 @@ export default async function buttonHandler(req: NextRequest) {
     return new Response(null, { status: 500 });
   }
 
+  // If we're going to invite the user, return a streaming response so that we
+  // get a status code back to Slack in under three seconds. This prevents the
+  // "Oh no, something went wrong." message.
   if (parsedPayload["actions"][0]["value"] === "approve") {
-    await inviteUser(firstName, lastName, email);
+    const encoder = new TextEncoder();
+    const readable = new ReadableStream({
+      async start(controller) {
+        await inviteUser(firstName, lastName, email);
+        controller.enqueue(encoder.encode("ok"));
+        controller.close();
+      },
+    });
+    return new Response(readable, { status: 200 });
   }
 
   return new Response("", { status: 200 });
