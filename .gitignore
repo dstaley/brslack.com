@@ -1,4 +1,6 @@
 .DS_Store
-public/
 node_modules/
 db.json
+.next/
+.vscode/
+.env
