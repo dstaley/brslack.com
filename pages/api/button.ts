@@ -21,10 +21,9 @@ async function inviteUser(
       }),
     }
   );
-  if (!res.ok) {
-    const response = await res.json();
-    console.log(response);
-  }
+
+  const response = await res.json();
+  console.log(response);
 }
 
 export default async function buttonHandler(req: NextRequest) {
