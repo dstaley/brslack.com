@@ -5,19 +5,26 @@ async function inviteUser(
   last_name: string,
   email: string
 ): Promise<void> {
-  await fetch("https://batonrouge.slack.com/api/users.admin.invite", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${process.env.SLACK_ADMIN_TOKEN}`,
-    },
-    body: JSON.stringify({
-      first_name,
-      last_name,
-      email,
-      resend: true,
-    }),
-  });
+  const res = await fetch(
+    "https://batonrouge.slack.com/api/users.admin.invite",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${process.env.SLACK_ADMIN_TOKEN}`,
+      },
+      body: JSON.stringify({
+        first_name,
+        last_name,
+        email,
+        resend: true,
+      }),
+    }
+  );
+  if (!res.ok) {
+    const response = await res.json();
+    console.log(response);
+  }
 }
 
 export default async function buttonHandler(req: NextRequest) {
