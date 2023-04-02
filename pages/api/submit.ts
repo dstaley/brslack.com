@@ -18,7 +18,9 @@ async function validCaptcha(
     },
     body: form.toString(),
   });
-  const { success } = (await res.json()) as { success: boolean };
+  const captchaResponse = await res.json();
+  console.log({ captchaResponse });
+  const { success } = captchaResponse as { success: boolean };
 
   return success;
 }
@@ -29,6 +31,7 @@ export default async function submissionHandler(req: NextRequest) {
   }
   try {
     const body = await req.formData();
+    console.log(body);
     const hcaptcha = body["h-captcha-response"];
     const valid = await validCaptcha(hcaptcha, req.ip);
     if (valid) {
