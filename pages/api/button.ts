@@ -11,14 +11,14 @@ async function inviteUser(
     {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${process.env.SLACK_ADMIN_TOKEN}`,
+        "Content-Type": "application/x-www-form-urlencoded",
       },
-      body: JSON.stringify({
+      body: new URLSearchParams({
         first_name,
         last_name,
         email,
-        resend: true,
+        resend: "true",
+        token: process.env.SLACK_ADMIN_TOKEN!,
       }),
     }
   );
