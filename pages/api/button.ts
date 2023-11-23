@@ -1,5 +1,3 @@
-import type { NextRequest } from "next/server";
-
 async function inviteUser(
   first_name: string,
   last_name: string,
@@ -30,7 +28,7 @@ async function inviteUser(
   }
 }
 
-export default async function buttonHandler(req: NextRequest) {
+export default async function buttonHandler(req: Request) {
   const body = await req.formData();
   const payload = body.get("payload");
   if (!payload) {

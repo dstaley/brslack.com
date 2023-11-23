@@ -1,9 +1,9 @@
-"use client";
-import Captcha from "./hCaptcha";
+import { submit } from "./actions";
+import Captcha from "../hCaptcha";
 
 export default function RegistrationForm() {
   return (
-    <form id="request-invite-form" action="/api/submit" method="post">
+    <form id="request-invite-form" action={submit} method="post">
       <label>
         <span>First Name: </span>
         <input name="first_name" required type="text" />
