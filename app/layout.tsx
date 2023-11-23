@@ -58,9 +58,9 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "http://www.schema.org",
               "@type": "EducationalOrganization",
-              name: "Baton Rouge Slack",
-              url: "https://brslack.com",
-              description: "<%= config.description %>",
+              name: metadata.title,
+              url: metadata.metadataBase,
+              description: metadata.description,
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Baton Rouge",
@@ -81,6 +81,12 @@ export default function RootLayout({
 }
 
 export const metadata: Metadata = {
+  metadataBase:
+    process.env.VERCEL_ENV === "production"
+      ? new URL("https://brslack.com")
+      : process.env.VERCEL_ENV === "preview"
+      ? new URL(`https://${process.env.VERCEL_URL}`)
+      : new URL(`http://localhost:${process.env.PORT || 3000}`),
   title: "Baton Rouge Slack",
   description:
     "The Baton Rouge Slack is a community for BR area developers, designers, marketers, business people, and other professionals involved in technology",
@@ -88,8 +94,7 @@ export const metadata: Metadata = {
     title: "Baton Rouge Slack",
     description:
       "The Baton Rouge Slack is a community for BR area developers, designers, marketers, business people, and other professionals involved in technology",
-    url: "https://brslack.com",
+    url: "/",
     type: "website",
   },
-  icons: "/img/icons/icon-72x72.png",
 };

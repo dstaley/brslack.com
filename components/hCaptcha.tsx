@@ -1,4 +1,3 @@
-"use client";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 
 export default function Captcha() {
